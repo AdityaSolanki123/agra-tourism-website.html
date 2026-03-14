@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Agra Tourism Guide</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+/* Glitter Background */
+
+body{
+background:linear-gradient(270deg,#ff6a00,#ee0979,#00c6ff,#0072ff);
+background-size:800% 800%;
+animation:bgmove 15s infinite alternate;
+color:white;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+/* Poster Banner */
+
+.poster{
+height:320px;
+background:url("https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 30px black;
+}
+
+.poster h1{
+font-size:55px;
+color:white;
+text-shadow:0 0 10px gold,0 0 20px gold,0 0 40px orange;
+animation:shine 3s infinite alternate;
+}
+
+/* Glitter text */
+
+@keyframes shine{
+from{letter-spacing:2px;}
+to{letter-spacing:6px;}
+}
+
+/* Navigation Tabs */
+
+.tabs{
+display:flex;
+justify-content:center;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+}
+
+.tabs button{
+padding:15px 30px;
+border:none;
+background:none;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:0.4s;
+}
+
+.tabs button:hover{
+background:#ff9800;
+transform:scale(1.1);
+}
+
+/* Content */
+
+.tabcontent{
+display:none;
+padding:40px;
+animation:fade 0.8s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* Tables */
+
+table{
+width:85%;
+margin:auto;
+border-collapse:collapse;
+background:rgba(255,255,255,0.9);
+color:black;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+th{
+background:linear-gradient(45deg,#ff512f,#dd2476);
+color:white;
+padding:14px;
+font-size:18px;
+}
+
+td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+background:#ffe0b2;
+transform:scale(1.02);
+transition:0.3s;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+color:white;
+text-shadow:0 0 10px black;
+}
+
+/* Footer */
+
+footer{
+margin-top:40px;
+text-align:center;
+padding:15px;
+background:rgba(0,0,0,0.8);
+}
+
+</style>
+
+<script>
+
+function openTab(tabname){
+var i;
+var x=document.getElementsByClassName("tabcontent");
+
+for(i=0;i<x.length;i++){
+x[i].style.display="none";
+}
+
+document.getElementById(tabname).style.display="block";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<!-- Poster -->
+
+<div class="poster">
+<h1>✨ Agra Tourism Guide ✨</h1>
+</div>
+
+<!-- Tabs -->
+
+<div class="tabs">
+<button onclick="openTab('place')">Places</button>
+<button onclick="openTab('food')">Food</button>
+<button onclick="openTab('stay')">Stay</button>
+<button onclick="openTab('cloth')">Clothing</button>
+</div>
+
+<!-- Places -->
+
+<div id="place" class="tabcontent" style="display:block">
+
+<h2>Best Places Near Tedi Bagiya</h2>
+
+<table>
+
+<tr>
+<th>Place</th>
+<th>Location</th>
+<th>Timing</th>
+</tr>
+
+<tr>
+<td>Taj Mahal</td>
+<td>Tajganj</td>
+<td>6 AM – 6:30 PM</td>
+</tr>
+
+<tr>
+<td>Agra Fort</td>
+<td>Rakabganj</td>
+<td>6 AM – 6 PM</td>
+</tr>
+
+<tr>
+<td>Tedi Bagiya Market</td>
+<td>Tedi Bagiya</td>
+<td>10 AM – 10 PM</td>
+</tr>
+
+<tr>
+<td>Mehtab Bagh</td>
+<td>Yamuna River</td>
+<td>6 AM – 6 PM</td>
+</tr>
+
+<tr>
+<td>Sadar Bazar</td>
+<td>Near Tedi Bagiya</td>
+<td>10 AM – 11 PM</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- Food -->
+
+<div id="food" class="tabcontent">
+
+<h2>Famous Food</h2>
+
+<table>
+
+<tr>
+<th>Restaurant</th>
+<th>Location</th>
+<th>Timing</th>
+</tr>
+
+<tr>
+<td>Gopal Das Petha</td>
+<td>Sadar Bazar</td>
+<td>9 AM – 10 PM</td>
+</tr>
+
+<tr>
+<td>Panchi Petha</td>
+<td>Tedi Bagiya</td>
+<td>9 AM – 10:30 PM</td>
+</tr>
+
+<tr>
+<td>Om Sweets</td>
+<td>Tedi Bagiya</td>
+<td>8 AM – 10 PM</td>
+</tr>
+
+<tr>
+<td>KFC</td>
+<td>NH-19</td>
+<td>11 AM – 11 PM</td>
+</tr>
+
+<tr>
+<td>Pind Balluchi</td>
+<td>Agra Cantt</td>
+<td>11 AM – 11 PM</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- Stay -->
+
+<div id="stay" class="tabcontent">
+
+<h2>Hotels Near Tedi Bagiya</h2>
+
+<table>
+
+<tr>
+<th>Hotel</th>
+<th>Location</th>
+<th>Service</th>
+</tr>
+
+<tr>
+<td>Hotel Love Kush</td>
+<td>Tedi Bagiya</td>
+<td>24 Hours</td>
+</tr>
+
+<tr>
+<td>ITC Mughal</td>
+<td>Fatehabad Road</td>
+<td>24 Hours</td>
+</tr>
+
+<tr>
+<td>Taj View Hotel</td>
+<td>Fatehabad Road</td>
+<td>24 Hours</td>
+</tr>
+
+<tr>
+<td>Jaypee Palace</td>
+<td>Fatehabad Road</td>
+<td>24 Hours</td>
+</tr>
+
+<tr>
+<td>Hotel Amar</td>
+<td>Agra Cantt</td>
+<td>24 Hours</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- Clothing -->
+
+<div id="cloth" class="tabcontent">
+
+<h2>Clothing Stores</h2>
+
+<table>
+
+<tr>
+<th>Store</th>
+<th>Location</th>
+<th>Timing</th>
+</tr>
+
+<tr>
+<td>V-Mart</td>
+<td>Tedi Bagiya</td>
+<td>10 AM – 10 PM</td>
+</tr>
+
+<tr>
+<td>TDI Mall</td>
+<td>Fatehabad Road</td>
+<td>10 AM – 10 PM</td>
+</tr>
+
+<tr>
+<td>Zudio</td>
+<td>Agra Cantt</td>
+<td>10 AM – 10 PM</td>
+</tr>
+
+<tr>
+<td>Puma</td>
+<td>Fatehabad Road</td>
+<td>10 AM – 9:30 PM</td>
+</tr>
+
+<tr>
+<td>Red Tape</td>
+<td>Sadar Bazar</td>
+<td>10 AM – 9:30 PM</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+✨ Incredible Agra Tourism Website ✨
+</footer>
+
+</body>
+</html>
